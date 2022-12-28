@@ -1,0 +1,10 @@
+.container {
+  max-height: 100%;
+  max-width: 100%;
+  display: grid;
+  background-color: aqua;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr 3fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
