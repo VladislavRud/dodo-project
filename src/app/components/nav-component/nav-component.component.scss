@@ -32,18 +32,18 @@
 }
 
 .items-routing {
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style-type: none;
-  grid-template-columns: repeat(5, 80px);
-  grid-column-gap: 20px;
   text-align: center;
-
 }
 
 
 ul.items-routing li {
   display: inline;
   padding: 22px 0px;
+  margin: 0 15px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -51,4 +51,15 @@ ul.items-routing li {
 
 ul.items-routing li:hover{
   color: orange;
+}
+
+.basket {
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgb(255, 105, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
 }
