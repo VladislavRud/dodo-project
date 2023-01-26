@@ -1,8 +1,15 @@
 <div class="container">
   <nav class="navbar">
-    <div class="logo-container">
-      <img alt="logo">
-    </div>
+    <nav class="top-navbar">
+      <div class="grid-top-nav">
+          <div class="logo-container">
+            <img alt="logo">
+          </div>
+          <div class="btn-top-nav">
+            <button class="btn-reg">Войти</button>
+          </div>
+      </div>
+    </nav>
     <nav class="grid-container">
       <div class="grid">
         <div class="content-router-container">
@@ -15,7 +22,7 @@
               <li><a>О нас</a></li>
             </div>
             <div class="basket-container">
-              <button class="basket">Корзина</button>
+              <app-modal-basket></app-modal-basket>
             </div>
           </ul>
         </div>
