@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RootAppComponentComponent } from './components/root-app-component/root-app-component.component';
 import { ItemMainComponent } from './components/item-main/item-main.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalBasketComponent } from './components/modal-basket/modal-basket.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavComponentComponent,
     RootAppComponentComponent,
     ItemMainComponent,
-    FooterComponent
+    FooterComponent,
+    ModalBasketComponent
   ],
   imports: [
     BrowserModule,
