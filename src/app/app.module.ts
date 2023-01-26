@@ -9,6 +9,9 @@ import { RootAppComponentComponent } from './components/root-app-component/root-
 import { ItemMainComponent } from './components/item-main/item-main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalBasketComponent } from './components/modal-basket/modal-basket.component';
+import { PizzaComponent } from './components/pizza/pizza.component';
+import { DrinkComponent } from './components/drink/drink.component';
+import { SnacksComponent } from './components/snacks/snacks.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ModalBasketComponent } from './components/modal-basket/modal-basket.com
     RootAppComponentComponent,
     ItemMainComponent,
     FooterComponent,
-    ModalBasketComponent
+    ModalBasketComponent,
+    PizzaComponent,
+    DrinkComponent,
+    SnacksComponent
   ],
   imports: [
     BrowserModule,
