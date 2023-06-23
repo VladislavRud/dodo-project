@@ -14,6 +14,7 @@ import {DrinkComponent} from './components/drink/drink.component';
 import {SnacksComponent} from './components/snacks/snacks.component';
 import {AuthRegComponent} from './components/auth-reg/auth-reg.component';
 import {RouterModule, Routes} from "@angular/router";
+import { AuthModalRegComponent } from './components/auth-modal-reg/auth-modal-reg.component';
 
 const appRoutes: Routes = [
   {path: "home", component: RootAppComponentComponent},
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     PizzaComponent,
     DrinkComponent,
     SnacksComponent,
-    AuthRegComponent
+    AuthRegComponent,
+    AuthModalRegComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,45 @@
-<p>auth-reg works!</p>
+<form [formGroup]="authForm">
+  <div class="auth-container">
+    <h3>Регистрация</h3>
+    <div class="auth-item">
+      <label>Введите имя</label>
+      <input type="text" name="name" formControlName="userName">
+      <div class="alert alert-danger"
+           *ngIf="authForm.controls['userName'].invalid && authForm.controls['userName'].touched">
+        Не указано имя
+      </div>
+    </div>
+    <div class="auth-item">
+      <label>Введите электронную почту</label>
+      <input type="email" name="email" formControlName="userEmail">
+      <div class="alert alert-danger"
+           *ngIf="authForm.controls['userEmail'].invalid && authForm.controls['userEmail'].touched">
+        Некорректный адрес электронной почты
+      </div>
+    </div>
+    <div formArrayName="userPhoneNumber">
+      <div class="form-group" *ngFor="let phone of getFormsControls()['controls']; let i = index" class="auth-item">
+        <label>Телефон</label>
+        <input class="form-control" formControlName="{{i}}"/>
+      </div>
+    </div>
+    <div class="auth-item">
+      <label>Введите пароль</label>
+      <input type="password" name="password" formControlName="userPassword">
+      <div class="alert alert-danger"
+           *ngIf="authForm.controls['userPassword'].invalid && authForm.controls['userPassword'].touched">
+        Некорректный пароль
+      </div>
+    </div>
+    <div class="add-phone-button">
+      <button class="btn btn-default" (click)="addPhone()">
+        Добавить телефон
+      </button>
+    </div>
+    <div class="auth-button">
+      <button class="btn btn-default" (click)="submit(authForm)">
+        Отправить
+      </button>
+    </div>
+  </div>
+</form>
