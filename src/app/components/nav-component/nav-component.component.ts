@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AuthServiceService} from "../../services/auth-service.service";
 
 @Component({
   selector: 'app-nav-component',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponentComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private readonly authService: AuthServiceService) {
+  }
 
   ngOnInit(): void {
+  }
+
+  public setAnyAuth():any {
+    this.authService.changeAuth(false)
   }
 
 }

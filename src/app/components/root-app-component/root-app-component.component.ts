@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthServiceService} from "../../services/auth-service.service";
 
 @Component({
   selector: 'app-root-app-component',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RootAppComponentComponent implements OnInit {
 
+  auth: boolean = true
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  public changeAuth() {
+    if(this.auth === true) {
+      this.auth = false
+    } else {
+      this.auth = true
+    }
+
+  }
+
 
 }

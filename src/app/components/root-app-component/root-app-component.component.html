@@ -1,10 +1,31 @@
-<div class="container">
+<div class="container" *ngIf="auth else authF">
   <nav class="navbar">
+    <nav class="top-navbar">
+      <div class="grid-top-nav">
+        <div class="logo-container">
+          <img alt="logo">
+        </div>
+        <div class="btn-top-nav">
+          <button class="btn-reg" routerLink="auth" (click)="changeAuth()">Войти</button>
+        </div>
+        <div class="btn-top-nav">
+          <button class="btn-reg" routerLink="auth" (click)="changeAuth()">Войти</button>
+        </div>
+      </div>
+    </nav>
     <app-nav-component></app-nav-component>
   </nav>
-  <div><app-item-main>
-  </app-item-main></div>
-  <div><app-footer></app-footer></div>
+  <div>
+    <app-item-main>
+    </app-item-main>
+  </div>
+  <div>
+    <app-footer></app-footer>
+  </div>
 </div>
 
-<router-outlet></router-outlet>
+<ng-template #authF>
+  <button (click)="changeAuth()" routerLink="home">x</button>
+  <router-outlet></router-outlet>
+</ng-template>
+
